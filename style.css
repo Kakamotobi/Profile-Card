@@ -117,8 +117,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 25px 0;
-
-    border-top: 1px solid #6a6f8141;
+    border-top: 1px solid #6a6f811f;
 }
 .items {
     display: flex;
