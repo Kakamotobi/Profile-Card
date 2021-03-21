@@ -1,5 +1,10 @@
 :root {
     font-size: 12px;
+    --darkcyan: hsl(185, 75%, 39%);
+    --darkdeblue: hsl(229, 23%, 23%);
+    --darkgreyblue: hsl(227, 10%, 46%);
+    --darkgrey: hsl(0, 0%, 59%);
+    --white: hsl(0, 0%, 100%);
 }
 
 * {
@@ -10,8 +15,8 @@
 
 body {
     font-family: "Kumbh Sans", sans-serif;
-    color: #221b1b;
-    background-color: #19a2ae;
+    color: var(--darkgreyblue);
+    background-color: var(--darkcyan);
     height: 100vh;
     width: 100%;
 }
@@ -50,11 +55,11 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    background-color: var(--white);
     z-index: 10;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 8px 12px 24px #00000033;
+    box-shadow: 8px 12px 24px hsla(0, 0%, 0%, 0.2);
     max-height: 360px;
 }
 
@@ -80,9 +85,8 @@ body {
     height: 107px;
     padding: 5px;
     border-radius: 50%;
-    background-color: blue;
+    background-color: var(--white);
     transform: translate(0, -22px);
-    background-color: #fff;
 }
 .image-holder img {
     border-radius: 50%;
@@ -96,17 +100,17 @@ body {
 }
 .bio__name {
     font-weight: 700;
-    color: #2d3248;
+    color: var(--darkdeblue);
 }
 .bio__age {
     font-weight: 400;
-    color: #969696;
+    color: var(--darkgrey);
     margin-left: 2px;
 }
 .bio__city {
     font-weight: 400;
     font-size: 1.2em;
-    color: #969696;
+    color: var(--darkgrey);
     margin-top: 12px;
 }
 
@@ -117,7 +121,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 25px 0;
-    border-top: 1px solid #6a6f811f;
+    border-top: 1px solid hsl(0, 0%, 88%);
 }
 .items {
     display: flex;
@@ -127,13 +131,13 @@ body {
     margin: 0 25px;
 }
 .item__stat {
-    color: #2d3248;
+    color: var(--darkdeblue);
 }
 .item__name {
     font-weight: 400;
     font-size: 0.8em;
     letter-spacing: 2px;
-    color: #969696;
+    color: var(--darkgrey);
     margin-top: 5px;
 }
 
