@@ -65,6 +65,11 @@ h2 {
     overflow: hidden;
     box-shadow: 8px 12px 24px hsla(0, 0%, 0%, 0.2);
 }
+@media screen and (max-width: 375px) {
+    .card {
+        width: 325px;
+    }
+}
 
 .card__banner {
     background-image: url(images/bg-pattern-card.svg);
