@@ -7,10 +7,18 @@
     --white: hsl(0, 0%, 100%);
 }
 
-* {
+html {
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    text-align: center;
 }
 
 body {
@@ -18,15 +26,6 @@ body {
     color: var(--darkgreyblue);
     background-color: var(--darkcyan);
     height: 100vh;
-    width: 100%;
-}
-
-/* -----Background----- */
-
-.background-image {
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
     background-image: url(images/bg-pattern-top.svg),
         url(images/bg-pattern-bottom.svg);
     background-position: left -65rem top -43rem, right -65rem bottom -43rem;
@@ -37,48 +36,57 @@ body {
     align-items: center;
 }
 
+/* -----Background----- */
+
 @media screen and (min-width: 768px) {
-    .background-image {
+    body {
         background-position: left -49rem top -41rem, right -41rem bottom -53rem;
     }
 }
-
 @media screen and (min-width: 1200px) {
-    .background-image {
+    body {
         background-position: left -23rem top -45rem, right -18rem bottom -52rem;
     }
 }
 
+/* ------Common----- */
+
+h2 {
+    font-weight: 700;
+    color: var(--darkdeblue);
+}
+
 /* -----Card----- */
 .card {
+    width: 350px;
+    height: 375px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--white);
-    z-index: 10;
-    border-radius: 12px;
     overflow: hidden;
     box-shadow: 8px 12px 24px hsla(0, 0%, 0%, 0.2);
-    max-height: 360px;
 }
 
-.card__top {
-    height: 30%;
-}
-
-/* -----Card Bottom----- */
-.card__bottom {
+.card__banner {
+    background-image: url(images/bg-pattern-card.svg);
     width: 100%;
-    height: 100%;
-    z-index: 5;
+    height: 140px;
+    overflow: hidden;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 
-.card__bottom__profile {
+.card__profile {
+    background-color: var(--white);
+    width: 100%;
+    height: 145px;
+    box-shadow: 0 -1px 10px hsla(0, 0%, 0%, 0.1);
+}
+.card__profile__contents {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: translate(0, -55px);
 }
 .image-holder {
     width: 107px;
@@ -86,52 +94,46 @@ body {
     padding: 5px;
     border-radius: 50%;
     background-color: var(--white);
-    transform: translate(0, -22px);
+    margin-bottom: 22px;
+    display: flex;
 }
 .image-holder img {
     border-radius: 50%;
 }
-.bio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 25px;
-}
 .bio__name {
-    font-weight: 700;
-    color: var(--darkdeblue);
+    margin-bottom: 12px;
 }
 .bio__age {
     font-weight: 400;
     color: var(--darkgrey);
-    margin-left: 2px;
+    margin-left: 5px;
 }
 .bio__city {
     font-weight: 400;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: var(--darkgrey);
-    margin-top: 12px;
 }
 
-/* ------ */
-
-.card__bottom__stats {
+.card__stats {
+    width: 100%;
+    height: 90px;
+    background-color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 25px 0;
-    border-top: 1px solid hsl(0, 0%, 88%);
+    border-top: 1px solid hsl(0, 0%, 92%);
+    overflow: hidden;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 .items {
+    width: 60px;
+    height: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 25px;
-}
-.item__stat {
-    color: var(--darkdeblue);
+    margin: 0 20px;
 }
 .item__name {
     font-weight: 400;
@@ -147,6 +149,7 @@ body {
     text-align: center;
     position: absolute;
     bottom: 0;
+    width: 100%;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
