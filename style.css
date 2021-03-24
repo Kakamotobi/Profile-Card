@@ -28,7 +28,7 @@ body {
     font-family: "Kumbh Sans", sans-serif;
     color: var(--darkgreyblue);
     background-color: var(--darkcyan);
-    height: 100vh;
+    height: 100%;
     background-image: url(images/bg-pattern-top.svg),
         url(images/bg-pattern-bottom.svg);
     background-position: left -65rem top -43rem, right -65rem bottom -43rem;
